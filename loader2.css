@@ -1,0 +1,49 @@
+.loader2 {
+    position: relative;
+    margin: auto;
+    width: 100px;
+    height: 150px;
+}
+
+.bar-left {
+    position: absolute;
+    background-color: var(--color--blue);
+    width: 12px;
+    height: 150px;
+    left: 0;
+}
+
+.bar-top {
+    position: absolute;
+    background-color: var(--color--blue);
+    width: 80px;
+    height: 12px;
+    left: 0;
+}
+
+.bar-right-horizontal {
+    position: absolute;
+    background-color: var(--color--blue);
+    width: 12px;
+    height: 40px;
+    right: 0;
+    top: 0;
+    rotate: -45deg;
+}
+
+.bar-right {
+    position: absolute;
+    background-color: var(--color--blue);
+    width: 12px;
+    height: 110px;
+    right: 0;
+    bottom: 0;
+}
+
+.bar-bottom {
+    position: absolute;
+    background-color: var(--color--blue);
+    width: 100px;
+    height: 12px;
+    bottom: 0;
+}
