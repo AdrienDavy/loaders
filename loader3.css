@@ -1,102 +1,65 @@
-/* From Uiverse.io by Juanes200122 */
-.container_SevMini {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+/* Animation du path extérieur */
+.outer-path {
+    stroke: currentColor;
+    stroke-width: 6;
+    /* Épaisseur augmentée */
+    fill: none;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: draw-outer 5s linear infinite;
 }
 
-.Ghost {
-  transform: translate(0px, -25px);
-  z-index: -1;
-  animation: opacidad 4s infinite ease-in-out;
+/* Animation des paths intérieurs */
+.inner-path {
+    stroke: currentColor;
+    stroke-width: 6;
+    /* Épaisseur augmentée */
+    fill: none;
+    stroke-dasharray: 500;
+    /* Ajusté pour la longueur des lignes */
+    stroke-dashoffset: 500;
+    animation: draw-inner 8s linear infinite;
 }
 
-@keyframes opacidad {
-  0% {
-    opacity: 1;
-    scale: 1;
-  }
-
-  50% {
-    opacity: 0.5;
-    scale: 0.9;
-  }
-
-  100% {
-    opacity: 1;
-    scale: 1;
-  }
+/* Décalage de l'animation pour chaque ligne */
+.inner-path:nth-child(1) {
+    animation-delay: 0.5s;
 }
 
-@keyframes estroboscopico {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  51% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-  }
+.inner-path:nth-child(2) {
+    animation-delay: 1.5s;
 }
 
-@keyframes rebote {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
+.inner-path:nth-child(3) {
+    animation-delay: 2.5s;
 }
 
-@keyframes estroboscopico1 {
-  0%,
-  50%,
-  100% {
-    fill: rgb(255, 95, 74);
-  }
+/* Keyframes pour le contour extérieur */
+@keyframes draw-outer {
+    0% {
+        stroke-dashoffset: 2000;
+    }
 
-  25%,
-  75% {
-    fill: rgb(16, 53, 115);
-  }
+    50% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -2000;
+    }
 }
 
-@keyframes estroboscopico2 {
-  0%,
-  50%,
-  100% {
-    fill: #17e300;
-  }
+/* Keyframes pour les lignes intérieures */
+@keyframes draw-inner {
+    0% {
+        stroke-dashoffset: 2000;
+    }
 
-  25%,
-  75% {
-    fill: #17e300b4;
-  }
-}
+    50% {
+        stroke-dashoffset: 0;
+    }
 
-.SevMini {
-  animation: rebote 4s infinite ease-in-out;
-}
-
-#strobe_led1 {
-  animation: estroboscopico 0.5s infinite;
-}
-
-#strobe_color1 {
-  animation: estroboscopico2 0.8s infinite;
-}
-
-#strobe_color3 {
-  animation: estroboscopico1 0.8s infinite;
-  animation-delay: 3s;
+    100% {
+        stroke-dashoffset: -2000;
+    }
 }
