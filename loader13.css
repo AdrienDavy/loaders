@@ -1,0 +1,56 @@
+#butterfly {
+  width: 200px;
+  height: 100px;
+  transform: rotate3d(0, 0, 1, 90deg);
+  perspective: 100px;
+  transform-origin: center;
+  transform-style: preserve-3d;
+}
+
+#wingRight {
+  transform: rotate3d(0, 1, 0, 45deg);
+  perspective: 600px;
+  transform-origin: center;
+  animation: wingRightAnimate 550ms ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+#wingLeft {
+  transform: rotate3d(0, 1, 0, 45deg);
+  perspective: 600px;
+  transform-origin: center;
+  animation: wingRightAnimate 550ms ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes wingRightAnimate {
+  0% {
+    transform: rotate3d(0, 1, 0, 120deg);
+    filter: blur(0px);
+  }
+
+  25% {
+    filter: blur(2px);
+  }
+
+  50% {
+    transform: rotate3d(0, 1, 0, -120deg);
+    filter: blur(0px);
+  }
+
+  75% {
+    filter: blur(5px);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 120deg);
+    filter: blur(0px);
+  }
+}
+
+.shadow1 {
+  transform: rotate(0deg);
+  /* Rotation fixe */
+  /* box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.5); */
+  /* Ombre initiale */
+}

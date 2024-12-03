@@ -1,21 +1,12 @@
-:root {
-  --color--violet: #7c238c;
-  --color--saumon: #ef5d60;
-  --color--dark: #2a2a2e;
-  --color--light: #ebf29c;
-  --color--blue: #227c9d;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
 }
 
 .svg-light path {
-  stroke: var(--color--light);
-}
-
-.svg-violet path {
-  stroke: var(--color--violet);
-}
-
-.svg-dark path {
-  stroke: var(--color--dark);
+  stroke: white;
 }
 
 .svg-frame {
@@ -39,8 +30,7 @@
 }
 
 .svg-frame:hover svg {
-  transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i)))
-    translateY(calc(-35px * var(--i)));
+  transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
 }
 
 .svg-frame svg #center {
@@ -60,7 +50,7 @@
 #out3 {
   animation: rotate16 3s ease-in-out infinite alternate;
   transform-origin: center;
-  stroke: #ff0;
+  stroke: yellow;
 }
 
 #inner3,
@@ -70,7 +60,7 @@
 }
 
 #center1 {
-  fill: #ff0;
+  fill: green;
   animation: rotate16 2s ease-in-out infinite alternate;
   transform-origin: center;
 }
